@@ -5,12 +5,14 @@ MDNotes
 
 Requires `rdiscount` and `pdfkit` for pdf utility.
 
+-----
+
 ## Install
 
-`gem install mdnotes`
-`gem uninstall mdnotes` to uninstall
+To install `gem install mdnotes`.
+To uninstall `gem uninstall mdnotes`.
 
-
+----
 ## Basics
 
 "Using a terminal, `cd` into the directory you want to takes notes.
@@ -25,6 +27,8 @@ Use `mdnotes -p` or `mdnotes --publish` to create pdf's of your notes. These wil
 
 If you want to include images in your notes you can place them in the images folder located under `./html/images`. Use `![alt-text](./images/my_image.png)` to reference an image.
 
+
+----
 ## Creating PDFs
 
 You might need to install [WKHTMLTOPDF](https://github.com/jdpace/PDFKit/wiki/Installing-WKHTMLTOPDF) for the pdf publishing to work.
