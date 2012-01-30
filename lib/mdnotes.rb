@@ -74,22 +74,30 @@ class MDNotes
 
 
 	def publish_notes
-		publishing = (@params['p'] || @params['publish']) && (require 'pdfkit')
+		require 'fileutils'
+		require 'pdfkit'
+		
+		publishing = (@params['p'] || @params['publish'])
 
 		if publishing
 			pdf_home = "./pdf"
 			Dir::mkdir(pdf_home) unless FileTest::directory?(pdf_home)	
 
 			Dir["./html/*.html"].each do |html|
-				f_name = html.split("/")[-1].split(".")[0]
 
-				html_file = open(html).read
+				f_name = html.split("/")[-1].split(".")[0]
+				output_file = File.join(".", "pdf", f_name + ".pdf")
+				html_file = File.open(html, 'r') { |f| f.read }
+
+				# Delete the file first.
+				FileUtils.rm output_file if FileTest.exists? output_file
 
 				puts "Publishing #{f_name}..."
+				
 				kit = PDFKit.new(html_file, :page_size => 'Letter')
-				kit.to_file(		File.join(".", "pdf", f_name + ".pdf"))
+				kit.to_file(output_file)
 			end
-		puts "Notes published."
+			puts "Notes published."
 		end
 
 	end
@@ -108,7 +116,8 @@ class MDNotes
 			puts "Use [mdnotes] to 'compile' your notes into html. These will be located in the html/ folder."
 			puts "Use [mdnotes -p] or [mdnotes --publish] to create pdf's of your notes. These will be located in the pdf/ folder"
 			puts "If you want to include images in your notes you can place them in the images folder located under ./html/images. Use ![alt-text](./images/my_image.png) to reference an image."
-			puts 
+			puts
+			puts "You can find this at https://bitbucket.org/ugorelik/mdnotes" 
 			puts
 		else
 			check_directories
@@ -120,6 +129,6 @@ class MDNotes
 end
 
 
-MDNotes.new.start
+# MDNotes.new.start #=> local debug
 
 
