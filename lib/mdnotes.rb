@@ -114,10 +114,10 @@ class MDNotes
 			puts "Use command [mdnotes] to create a notes directory."
 			puts "Create your markdown (.md) in the md/ directory."
 			puts "Use [mdnotes] to 'compile' your notes into html. These will be located in the html/ folder."
-			puts "Use [mdnotes -p] or [mdnotes --publish] to create pdf's of your notes. These will be located in the pdf/ folder"
+			puts "Use [mdnotes -p] or [mdnotes --publish] to create PDFs of your notes. These will be located in the pdf/ folder"
 			puts "If you want to include images in your notes you can place them in the images folder located under ./html/images. Use ![alt-text](./images/my_image.png) to reference an image."
 			puts
-			puts "You can find this at https://bitbucket.org/ugorelik/mdnotes" 
+			puts "You can find this at http://bitbucket.org/ugorelik/mdnotes" 
 			puts
 		else
 			check_directories
