@@ -30,7 +30,7 @@ Requires `rdiscount` and `pdfkit` for pdf utility.
 
 ### Creating PDFs
 
-You might need to install [WKHTMLTOPDF](https://github.com/jdpace/PDFKit/wiki/Installing-WKHTMLTOPDF) for the pdf publishing to work.
+Install [WKHTMLTOPDF](https://github.com/jdpace/PDFKit/wiki/Installing-WKHTMLTOPDF) for the pdf publishing to work. You can use the following commands:
 
     curl -O http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.9.9-OS-X.i368
     mv wkhtmltopdf-0.9.9-OS-X.i368 /usr/local/bin/wkhtmltopdf
