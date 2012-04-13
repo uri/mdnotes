@@ -105,20 +105,28 @@ class MDNotes
 
 	def start
 		if @params['h'] || @params['help']
-			puts
-			puts
-			puts "MDNotes"
-			puts "======="
-			puts
-			puts "Using a terminal, [cd] into the directory you want to takes notes."
-			puts "Use command [mdnotes] to create a notes directory."
-			puts "Create your markdown (.md) in the md/ directory."
-			puts "Use [mdnotes] to 'compile' your notes into html. These will be located in the html/ folder."
-			puts "Use [mdnotes -p] or [mdnotes --publish] to create PDFs of your notes. These will be located in the pdf/ folder"
-			puts "If you want to include images in your notes you can place them in the images folder located under ./html/images. Use ![alt-text](./images/my_image.png) to reference an image."
-			puts
-			puts "You can find this at http://bitbucket.org/ugorelik/mdnotes" 
-			puts
+			
+			help_str = %Q{
+Instruction:
+	
+- Using a terminal, [cd] into the directory you want to takes notes.
+- Use command [mdnotes] to create a notes directory.
+- Create your markdown (.md) in the md/ directory.
+- Use the command [mdnotes] to 'compile' your notes into html. These will be located in the html/ folder.
+- Use [mdnotes -p] or [mdnotes --publish] to create PDFs of your notes. These will be located in the pdf/ folder
+- If you want to include images in your notes you can place them in the images folder located under ./html/images. Use ![alt-text](./images/my_image.png) to reference an image.
+
+Parameters:
+
+-p, --publish					Create PDFs.
+-h, --help 						Show the help.
+
+Repo:
+
+You can find this at http://bitbucket.org/ugorelik/mdnotes
+
+			
+			}
 		else
 			check_directories
 			compile_notes
