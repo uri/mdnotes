@@ -105,10 +105,15 @@ class MDNotes
 
 	def start
 		if @params['h'] || @params['help']
-			
-			help_str = %Q{
-Instruction:
-	
+		
+		tabs = 3
+		str = %Q{			
+MDNOTES
+-------
+
+Usage: mdnotes [optional params]
+
+Description:
 - Using a terminal, [cd] into the directory you want to takes notes.
 - Use command [mdnotes] to create a notes directory.
 - Create your markdown (.md) in the md/ directory.
@@ -116,17 +121,16 @@ Instruction:
 - Use [mdnotes -p] or [mdnotes --publish] to create PDFs of your notes. These will be located in the pdf/ folder
 - If you want to include images in your notes you can place them in the images folder located under ./html/images. Use ![alt-text](./images/my_image.png) to reference an image.
 
-Parameters:
-
--p, --publish					Create PDFs.
--h, --help 						Show the help.
+Options:
+-p, --publish#{"\t"*tabs}Create PDFs.
+-h, --help#{"\t"*tabs}Show the help.
 
 Repo:
-
 You can find this at http://bitbucket.org/ugorelik/mdnotes
-
-			
-			}
+---
+		}
+		
+		puts str
 		else
 			check_directories
 			compile_notes

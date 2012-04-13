@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'mdnotes'
-  s.version     = '0.1.8'
+  s.version     = '0.1.9'
 	s.executables << 'mdnotes'
   s.summary     = "Suite for taking easy notes in markdown and then converting to html and pdf."
   s.description = "Suite for taking easy notes in markdown and then converting to html and pdf."
