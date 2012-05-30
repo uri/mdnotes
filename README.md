@@ -36,6 +36,10 @@ Install [WKHTMLTOPDF](https://github.com/jdpace/PDFKit/wiki/Installing-WKHTMLTOP
     mv wkhtmltopdf-0.9.9-OS-X.i368 /usr/local/bin/wkhtmltopdf
     chmod +x /usr/local/bin/wkhtmltopdf
 
+Or using homebrew
+
+    brew install wkhtmltopdf
+
 ____
 
 ### You can find out more about [me](http://urigorelik.info/).
