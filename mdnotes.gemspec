@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Uri Gorelik"]
   s.email       = 'uri.gore@gmail.com'
   s.files       = ["lib/mdnotes.rb"]
-  s.homepage    = 'https://bitbucket.org/ugorelik/mdnotes'
+  s.homepage    = 'https://github.com/ugorelik/mdnotes'
 	s.requirements << 'rdiscount'
 	s.requirements << 'pdfkit'
 	s.add_runtime_dependency 'rdiscount'
